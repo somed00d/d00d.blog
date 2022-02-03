@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>d00d.blog</title>
-
-  <script type="module">
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js');
-  </script>
-
-  <link rel="stylesheet" href="/css/main.css">
-
-  <meta name="description" content="Page description">
-  <meta property="og:title" content="jsd.blog">
-  <meta property="og:description" content="Page description">
-  <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
-  <meta property="og:image:alt" content="Image description">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:url" content="https://www.mywebsite.com/page">
-  <link rel="canonical" href="https://www.mywebsite.com/page">
-
-  <!-- <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/my.webmanifest"> -->
-  <meta name="theme-color" content="#FF00FF">
-</head>
-
-<body>
-  <header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <script type="module">
+      document
+        .documentElement
+        .classList
+        .remove('no-js');
+      document
+        .documentElement
+        .classList
+        .add('js');
+    </script>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="description" content="Personal blog of just_some_d00d">
+    <meta property="og:title" content="d00d.blog">
+    <meta property="og:description" content="Personal blog of just_some_d00d">
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+    <meta property="og:image:alt" content="Image description">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://www.d00d.blog">
+    <link
+    rel="canonical" href="https://www.d00d.blog">
+    <!--
+         <link rel="icon" href="/favicon.ico"> <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+         <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="manifest" href="/my.webmanifest">
+    -->
+    <meta name="theme-color" content="#FF00FF">
+  </head>
+  <body>
     {% include 'components/nav.njk' %}
-  {{ content | safe }}
-</body>
+    {{ content | safe }}
+  </body>
 </html>
