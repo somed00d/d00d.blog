@@ -8,6 +8,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
 
+  eleventyConfig.addPassthroughCopy("public");
   // The following copies to `_site/img`
   eleventyConfig.addPassthroughCopy({ "_includes/css": "css" });
 
