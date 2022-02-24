@@ -1,11 +1,16 @@
 ---
 layout: layouts/home.njk
 ---
+{# 
+{% include 'components/quotesBox.njk' %}
 
-{# {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+{% set maxPosts = collections.posts.length | min(3) %}
+<h1 class="thoughts-heading">{{ maxPosts }} thoughts</h1>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include 'components/postslist.njk' %} #}
-{% include 'components/love.njk' %}
+
+<div style="height: 1000px">
+Haha
+</div>

@@ -5,6 +5,11 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const fs = require("fs");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const eleventyGoogleFonts = require("eleventy-google-fonts");
+const dayjs = require('dayjs')
+const relativeTime = require('dayjs/plugin/relativeTime')
+const eleventySass = require("eleventy-sass");
+dayjs.extend(relativeTime)
 
 module.exports = function(eleventyConfig) {
 
@@ -12,9 +17,21 @@ module.exports = function(eleventyConfig) {
   // The following copies to `_site/img`
   eleventyConfig.addPassthroughCopy({ "_includes/css": "css" });
 
+  // Quotes JavaScript
+  eleventyConfig.addPassthroughCopy({"_includes/js": "scripts"})
+  eleventyConfig.addPassthroughCopy({"_data/quotesList.json": "quotes.json"})
+
    // Add plugins
+  //  RSS
   eleventyConfig.addPlugin(pluginRss);
+
+  // Syntax highlighting
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  // Google fonts
+  eleventyConfig.addPlugin(eleventyGoogleFonts);
+
+  // Sass
+  eleventyConfig.addPlugin(eleventySass);
 
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -26,6 +43,10 @@ module.exports = function(eleventyConfig) {
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  });
+
+  eleventyConfig.addFilter('dateSince', (dateObj) => {
+    return dayjs().to(dateObj);
   });
 
   // Get the first `n` elements of a collection.
@@ -96,6 +117,12 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    dir: {
+      input: ".",
+      includes: "_includes",
+      data: "_data",
+      output: "_site",
+    },
     // Pre-process *.md files with: (default: `liquid`)
     markdownTemplateEngine: "njk",
 

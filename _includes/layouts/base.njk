@@ -31,7 +31,8 @@
     <meta property="og:url" content="https://some.d00d.blog">
     <link
     rel="canonical" href="https://some.d00d.blog">
-    <meta name="theme-color" content="#FF00FF">
+    <meta name="theme-color" content="#6366f1">
+    <script src="/scripts/quotes.js" defer></script>
     <script defer data-domain="some.d00d.blog" src="https://plausible.io/js/plausible.js"></script>
   </head>
 
@@ -48,12 +49,10 @@ o88o     o8888o o888o o888o `Y8bod88P"          o888o  8888888888
  -->
 
   <body>
-    {% include 'components/nav.njk' %}
+      {% include 'components/nav.njk' %}
     <main>
     {{ content | safe }}
     </main>
-    <footer>
-      some.d00d.blog
-    </footer>
+    {# {% include 'components/the-footer.njk' %} #}
   </body>
 </html>

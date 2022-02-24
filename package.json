@@ -11,12 +11,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^1.0.0",
+    "@slinkity/renderer-vue": "^0.1.6",
+    "animate.css": "^4.1.1",
+    "dayjs": "^1.10.7",
+    "eleventy-google-fonts": "^0.1.0",
+    "slinkity": "^0.6.1",
+    "vue": "3"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@types/markdown-it": "*",
+    "eleventy-sass": "^1.1.0",
     "luxon": "^2.3.0",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1"

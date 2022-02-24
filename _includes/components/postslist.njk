@@ -2,12 +2,21 @@
 <ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 {% for post in postslist | reverse %}
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {% for tag in post.data.tags | filterTagList %}
-      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
+    <div class="postlist-meta">
+      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <div class="date-tag">
+      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | dateSince }}</time>
+      {% for tag in post.data.tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+        {# READ ME #}
+      {% endfor %}
+      </div>
+    </div>
+    <button class="read-more">Read more</button>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a ante vel dolor dignissim maximus quis sed tellus. In ac ante sed felis elementum ultrices. Nullam vel enim id elit maximus volutpat quis vel libero. Donec erat diam, gravida nec mauris et, eleifend lobortis ipsum. Donec augue lacus, blandit quis gravida sit amet, maximus non lectus. Nam magna lectus, pulvinar eget dui ut, sodales dictum turpis. Nulla sagittis erat ex, ornare ultricies felis egestas at. Nullam eget dictum nisl. Ut sollicitudin libero ante, nec maximus orci feugiat sed. Maecenas in ante elit. Quisque finibus hendrerit vestibulum. Ut ac eleifend orci. Mauris condimentum convallis lacus vel aliquet. Ut feugiat nunc a facilisis mollis. Morbi vitae porta odio. Proin in placerat massa.
+      </p>
   </li>
 {% endfor %}
 </ol>
