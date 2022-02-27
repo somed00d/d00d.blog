@@ -1,0 +1,40 @@
+.footer {
+    position: sticky;
+    top: 100vh;
+    background-color: white;
+    width: 100%;
+    padding: $space-xs;
+    margin-top: $space-m;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a:not(.icon-link) {
+            @include hover-focus {
+                color: $gray-800;
+                background-color: $gray-200;
+            }
+            color: $gray-500;
+            font-family: $font-family-monospace;
+            font-size: $step-0;
+            letter-spacing: 0.8px;
+            -webkit-tap-highlight-color: transparent;
+            transition: all 180ms ease-out;
+            padding: 0.5rem 1rem;
+            border-radius: $border-radius-md;
+        }
+
+        .icon-wrapper {
+            display: flex;
+        }
+        .icon-link {
+            @include hover-focus {
+                color: $sdb-color-primary-darker;
+            }
+            color: $gray-500;
+            padding: 0.5rem 1rem;
+            -webkit-tap-highlight-color: transparent;
+            transition: all 180ms ease-out;
+        }
+    }
+}

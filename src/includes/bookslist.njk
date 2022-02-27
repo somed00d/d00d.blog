@@ -1,0 +1,19 @@
+<ol reversed class="books-list" style="counter-reset: start-from {{ (bookslistCounter or bookslist.length) + 1 }}">
+{% for book in bookslist | reverse %}
+  <li class="books-list-item{% if book.url == url %} booklist-item-active{% endif %}">
+    <div class="books-list-date-time">
+      <a href="{{ book.url | url }}" class="books-list-link">{% if book.data.title %}{{ book.data.title }}{% else %}<code>{{ book.url }}</code>{% endif %}</a>
+    <div class="book-author">
+      {{ book.data.author }}
+    </div>
+    <div class="book-tags">
+      {% for tag in book.data.tags.slice(1, 2) %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="book-tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    </div>
+      {# <img src="/assets/images/books/{{ book.data.coverImage | url }}" class="book-cover-image" /> #}
+  </li>
+{% endfor %}
+</ol>

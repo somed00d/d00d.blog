@@ -1,0 +1,33 @@
+nav {
+    .nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        .nav__item {
+            @include hover-focus {
+                color: red;
+            };
+            margin: 0 1rem;
+            margin-top: -15px;
+            outline: none !important;
+            .nav__link {
+                @include hover-focus {
+                    box-shadow: 0 0 0 2px $sdb-color-primary;
+                    color: $sdb-color-primary;
+                }
+                color: $sdb-color-secondary-light;
+                background-color:  $sdb-color-bg;
+                box-shadow: 0 0 0 1px $sdb-color-secondary-light;
+                text-decoration: none;
+                padding: 0.5rem 0.75rem;
+                font-family: $font-family-monospace;
+                border-bottom-left-radius: $border-radius-md;
+                border-bottom-right-radius: $border-radius-md;
+                -webkit-tap-highlight-color: transparent;
+                outline: none !important;
+                transition: all 180ms ease-out;
+            }
+        }
+    }
+}

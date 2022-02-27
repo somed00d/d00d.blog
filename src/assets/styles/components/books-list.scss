@@ -1,0 +1,162 @@
+.books-list__header {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .books-list__title {
+        font-family: 'Varela Round';
+        font-weight: 400;
+        color: $color-text-300;
+        background-color: white;
+        font-size: $step-1;
+        padding: $space-xs;
+        display: inline;
+    }
+}
+
+.books-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+
+    .books-list-item {
+        @include hover-focus {
+            box-shadow: 0 0 0 2px $gray-800, $box-shadow;
+        }
+        
+        box-shadow: 0 0 0 2px #bbf7d0;
+        border-radius: $border-radius-sm;
+        padding: $space-s;
+        margin: $space-xs $space-3xs $space-m $space-3xs;
+        transition: $trans-basic-slow;
+        color: $color-text-100;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .books-list-date-time {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .books-list-link {
+            font-family: $font-family-sans-serif;
+            font-weight: 600;
+            font-size: $step-2;
+            line-height: 1.3;
+            color: $sdb-color-green;
+            text-decoration: none;
+            transition: $trans-basic-slow;
+            -webkit-tap-highlight-color: transparent;
+            padding: 0;
+            text-transform: capitalize;
+            &:focus {
+                text-decoration: underline;
+                box-shadow: 0 0 0 2px lighten(blue, 35%);
+                border-radius: $border-radius-sm;
+            }
+        }
+
+        .books-list-date {
+            font-family: $font-family-monospace;
+            font-size: $step--3;
+            transition: all 180ms ease-out;
+            margin-top: $space-3xs;
+            margin-left: $space-s;
+            white-space: nowrap;
+        }
+
+        .book-author {
+            color: $color-text-200;
+            margin-top: $space-2xs;
+        }
+
+        .book-tags {
+            display: flex;
+
+            .book-tag {
+                // color: $sdb-color-green;
+                color: $color-text-200;
+                margin-right: $space-xs;
+                font-size: $step--3;
+                text-decoration: none;
+                font-family: $font-family-monospace;
+            }
+        }
+
+        .book-cover-image {
+            object-fit: contain;
+            height: 100%;
+            max-height: 85px;
+            border-radius: 3px;
+            filter: grayscale(100);
+            margin-left: $space-m;
+        }
+
+        .books-list-read-more {
+            position: absolute;
+            display: grid;
+            place-content: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            font-family: 'Varela Round';
+            -webkit-tap-highlight-color: transparent;
+
+            a {
+                @include hover-focus {
+                    background-color: transparent;
+                    color: $text-color;
+                    text-decoration: 2px solid black underline;
+                }
+                color: $sdb-color-green;
+                text-decoration: none;
+                padding: $space-xs; 
+            }
+        }
+    }
+}
+
+.thoughts-page-header-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+
+    .thoughts-page-header {
+        background-color: white;
+        display: inline;
+        padding: 1rem;
+        font-size: $step-2;
+        font-weight: 400;
+        color: $color-text-200;
+    }
+}
+
+.books-list__more-link {
+    @include hover-focus {
+        color: $sdb-color-green-darker;
+        box-shadow: 0 0 0 2px $sdb-color-green-darker;
+    }
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Varela Round';
+    font-weight: 400;
+    color: $sdb-color-green;
+    background-color: white;
+    font-size: $step--2;
+    text-decoration: none;
+    margin: $space-3xs;
+    padding: $space-2xs $space-xs;
+    border-radius: $border-radius-sm;
+    transition: $trans-basic;
+    @media (min-width: 1140px) {
+        margin: 0 14rem;
+    }
+}

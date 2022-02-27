@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #222;
+}
+
+body > * {
+  --layout-spacing: max(8vh, 3rem);
+  // --max-width: 70ch;
+  --max-width: 1140px;
+  width: min(100%, var(--max-width));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  margin-top: var(--layout-spacing);
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.2;
+}
+
+:is(h2, h3):not(:first-child) {
+  margin-top: 2em;
+}
+
+article * + * {
+  margin-top: 1em;
+}
+
+a {
+  text-underline-offset: 0.30em;
+  text-decoration-style: dotted;
+  color: $sdb-color-primary-darker;
+}
+
+header {
+    a {
+        text-decoration: none;
+    }
+}
+
+footer {
+    a {
+        text-decoration: none;
+    }
+}
+
+.layout {
+    height: 100%;
+}
