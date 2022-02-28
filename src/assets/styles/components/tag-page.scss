@@ -1,0 +1,178 @@
+.tags-list__header {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .tags-list__title {
+        font-family: 'Varela Round';
+        font-weight: 400;
+        color: $color-text-300;
+        background-color: white;
+        font-size: $step-1;
+        padding: $space-xs;
+        display: inline;
+    }
+}
+
+.tags-list {
+    list-style: none;
+    padding: 0 $space-m;
+    margin: 0 auto;
+
+    .tags-list-item {
+        @include hover-focus {
+            box-shadow: 0 0 0 2px $gray-800, $box-shadow;
+        }
+        
+        box-shadow: 0 0 0 2px $gray-400;
+        border-radius: $border-radius-sm;
+        padding: $space-s;
+        margin: $space-xs $space-3xs $space-m $space-3xs;
+        transition: $trans-basic-slow;
+        color: $color-text-100;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+
+        .tags-list-date-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .tags-list-link {
+            font-family: 'Open Sans';
+            font-weight: 600;
+            font-size: $step-2;
+            color: $sdb-color-secondary-darker;
+            text-decoration: none;
+            transition: $trans-basic-slow;
+            -webkit-tap-highlight-color: transparent;
+            padding: 0;
+            text-transform: capitalize;
+            &:focus {
+                text-decoration: underline;
+                box-shadow: 0 0 0 2px lighten(blue, 35%);
+                border-radius: $border-radius-sm;
+            }
+        }
+
+        .tags-list-date {
+            font-family: $font-family-monospace;
+            font-size: $step--3;
+            transition: all 180ms ease-out;
+            margin-top: $space-3xs;
+            margin-left: $space-s;
+            white-space: nowrap;
+        }
+
+        .tags-list-excerpt {
+            display: block;
+            color: $color-text-200;
+            overflow: hidden;
+            margin-top: $space-2xs;
+            height: auto;
+            font-family: serif;
+        }
+
+        .tags-list-read-more {
+            position: absolute;
+            display: grid;
+            place-content: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            font-family: 'Varela Round';
+            -webkit-tap-highlight-color: transparent;
+
+            a {
+                @include hover-focus {
+                    background-color: transparent;
+                    color: $text-color;
+                    text-decoration: 2px solid black underline;
+                }
+                color: $sdb-color-secondary-darker;
+                text-decoration: none;
+                padding: $space-xs; 
+            }
+        }
+    }
+    .tags-list__more-link {
+        @include hover-focus {
+            color: $sdb-color-secondary-darker;
+            box-shadow: 0 0 0 2px $sdb-color-secondary;
+        }
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-start;
+        font-family: 'Varela Round';
+        font-weight: 400;
+        color: $sdb-color-secondary-darker;
+        background-color: white;
+        font-size: $step--2;
+        text-decoration: none;
+        margin: $space-3xs;
+        padding: $space-2xs $space-xs;
+        border-radius: $border-radius-sm;
+        transition: $trans-basic;
+    }
+}
+
+.thoughts-page-header-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+
+    .thoughts-page-header {
+        background-color: white;
+        display: inline;
+        padding: 1rem;
+        font-size: $step-2;
+        font-weight: 400;
+        color: $color-text-200;
+    }
+}
+
+
+.tags-list__more-link {
+    @include hover-focus {
+        color: $sdb-color-secondary-darker;
+        box-shadow: 0 0 0 2px $sdb-color-secondary;
+    }
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Varela Round';
+    font-weight: 400;
+    color: $sdb-color-secondary-darker;
+    background-color: white;
+    font-size: $step--2;
+    text-decoration: none;
+    margin: $space-3xs;
+    padding: $space-2xs $space-xs;
+    border-radius: $border-radius-sm;
+    transition: $trans-basic;
+    @media (min-width: 1140px) {
+        margin: 0 14rem;
+    }
+}
+
+.tag-page-see-all {
+    display: inline-block;
+    background-color: white;
+    padding: $space-m $space-s;
+    font-size: $step-0;
+    a {
+        color: $sdb-color-secondary-darker;
+    } 
+}
+
+.tag-page-header {
+    display: inline-flex;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: $space-m 0;
+}

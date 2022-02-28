@@ -1,0 +1,59 @@
+.quotes-box__wrapper {
+    display: grid;
+    place-content: center;
+    height: 200px;
+    max-width: 600px;
+    margin: $space-s auto;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+    padding: $space-xs $space-s;
+}
+
+.qb {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.quote-text {
+    display: inline;
+    color: $sdb-color-secondary-darker;
+    font-size: $step-1;
+    font-family: 'Zilla Slab';
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 300ms ease-in-out;
+}
+
+.quote-text::before {
+    content: '“';
+    font-family: 'Varela Round';
+    font-size: 20px;
+    margin-right: 0.2rem;
+}
+
+.quote-text::after {
+    content: '”';
+    font-family: 'Varela Round';
+    font-size: 20px;
+    margin-left: 0.2rem;
+}
+
+.quote-author {
+    display: inline-block;
+    margin: 0.5rem;
+    color: $color-text-100;
+    font-size: $step--1;
+    font-weight: 300;
+    font-family: sans-serif;
+    white-space: nowrap;
+}
+
+.quote-author::before {
+    content: '—';
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+.fade {
+    opacity: 0;
+}

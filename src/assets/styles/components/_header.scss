@@ -1,0 +1,14 @@
+.header {
+    .header__inner {
+        .header__site-title {
+            text-decoration: none;
+            font-family: $font-family-monospace;
+            color: $gray-900;
+            font-weight: 600;
+            font-size: $step-4;
+            padding: $space-s;
+            padding-bottom: 0;
+            background-color: white;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+---
+permalink: /books/
+layout: home
+---
+
+<div class="thoughts-page-header-wrapper">
+    <h1 class="thoughts-page-header">All books</h1>
+</div>
+
+{# Books #}
+{% set bookslist = collections.books | head(-3) %}
+{% set bookslistCounter = collections.books | length %}
+{% include "bookslist.njk" %}

@@ -1,0 +1,13 @@
+---
+permalink: /posts/
+layout: home
+---
+
+<div class="thoughts-page-header-wrapper">
+    <h1 class="thoughts-page-header">All posts</h1>
+</div>
+
+{# Posts #}
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.njk" %}

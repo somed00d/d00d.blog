@@ -1,0 +1,144 @@
+.thoughts-list__header {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .thoughts-list__title {
+        font-family: 'Varela Round';
+        font-weight: 400;
+        color: $color-text-300;
+        background-color: white;
+        font-size: $step--1;
+        padding: $space-xs;
+        display: inline;
+    }
+}
+
+.thoughtlist {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+
+    .thoughtlist-item {
+        @include hover-focus {
+            box-shadow: 0 0 0 2px $gray-800, $box-shadow;
+        }
+        
+        box-shadow: 0 0 0 2px $sdb-color-primary-lighter;
+        border-radius: $border-radius-sm;
+        padding: $space-s;
+        margin: $space-xs $space-3xs $space-m $space-3xs;
+        transition: $trans-basic-slow;
+        color: $color-text-100;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        background-color: white;
+
+        .thoughtlist-date-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .thoughtlist-link {
+            font-family: 'Lobster';
+            font-size: $step-2;
+            text-decoration: none;
+            transition: $trans-basic-slow;
+            -webkit-tap-highlight-color: transparent;
+            padding: 0;
+            text-transform: capitalize;
+            &:focus {
+                text-decoration: underline;
+                box-shadow: 0 0 0 2px lighten(blue, 35%);
+                border-radius: $border-radius-sm;
+            }
+        }
+
+        .thoughtlist-date {
+            font-family: $font-family-monospace;
+            font-size: $step--3;
+            transition: all 180ms ease-out;
+            margin-top: $space-3xs;
+            margin-left: $space-s;
+            white-space: nowrap;
+        }
+
+        .thoughtlist-excerpt {
+            display: block;
+            color: $color-text-100;
+            overflow: hidden;
+            margin-top: $space-2xs;
+            height: 140px;
+             -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+            @media (min-width: 1140px) {
+                height: 65px;
+            };
+            @media (min-width: 768px) {
+                height: 100px;
+            }
+        }
+
+        .thoughtlist-read-more {
+            position: absolute;
+            display: grid;
+            place-content: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            font-family: 'Varela Round';
+            -webkit-tap-highlight-color: transparent;
+
+            a {
+                @include hover-focus {
+                    background-color: transparent;
+                    color: $text-color;
+                    text-decoration: 2px solid black underline;
+                }
+                color: $sdb-color-primary-darker;
+                text-decoration: none;
+                padding: $space-xs; 
+            }
+        }
+    }
+}
+
+.thoughts-page-header-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+
+    .thoughts-page-header {
+        background-color: white;
+        display: inline;
+        padding: 1rem;
+        font-size: $step-1 !important;
+        font-weight: 400;
+    }
+}
+
+.thoughts-list__more-link {
+    @include hover-focus {
+        color: $sdb-color-primary-darker;
+        box-shadow: 0 0 0 2px $sdb-color-primary;
+    }
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Varela Round';
+    font-weight: 400;
+    color: $sdb-color-primary;
+    background-color: white;
+    font-size: $step--2;
+    text-decoration: none;
+    margin: $space-3xs 0;
+    padding: $space-2xs $space-xs;
+    border-radius: $border-radius-sm;
+    transition: $trans-basic;
+    @media (min-width: 1140px) {
+        margin: 0 14rem;
+    }
+}

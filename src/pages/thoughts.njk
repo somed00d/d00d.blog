@@ -1,0 +1,13 @@
+---
+permalink: /thoughts/
+layout: default
+---
+
+<div class="thoughts-page-header-wrapper">
+    <h1 class="thoughts-page-header">All thoughts</h1>
+</div>
+
+{# Thoughts #}
+{% set thoughtslist = collections.thoughts | head(-3) %}
+{% set thoughtslistCounter = collections.thoughts | length %}
+{% include "thoughtslist.njk" %}

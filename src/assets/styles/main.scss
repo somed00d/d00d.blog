@@ -1,0 +1,57 @@
+
+// Utils
+@import 'utils/functions';
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/fluid-sizing';
+@import 'base/typography-sizing';
+@import 'base/base';
+
+// Components
+@import 'components/footer';
+@import 'components/header';
+@import 'components/thoughts-list.scss';
+@import 'components/posts-list.scss';
+@import 'components/books-list';
+@import 'components/tag-page';
+@import 'components/quotes-box';
+// @import 'components/icon';
+// @import 'components/nav';
+
+// Layouts
+@import 'layouts/thought';
+@import 'layouts/post';
+@import 'layouts/book';
+
+html, body { height: 99%; }
+
+// html {
+//     background-color: $sdb-color-primary-lighter;
+// }
+
+body {
+    background-color: white;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    margin-top: 4rem;
+}
+
+// ERASE LATER
+* {
+    &:focus {
+        outline: 0px solid transparent;
+    }
+}
+
+*a {
+    &:focus {
+        text-decoration: none;
+        // box-shadow: 0 0 0 2px lighten($sdb-color-primary-darker, 20%);
+        background-color: $gray-100;
+        border-radius: $border-radius-sm;
+    }
+}
