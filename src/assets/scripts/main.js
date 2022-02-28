@@ -4,3 +4,4 @@ import 'focus-visible'
 // Internal Modules
 import './modules/nav'
 import './modules/thoughtItemHover'
+import './modules/quotes'

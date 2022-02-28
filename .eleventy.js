@@ -60,7 +60,7 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
-    config.addPassthroughCopy('scripts/thoughtItemHover.js')
+    config.addPassthroughCopy('src/data/quotesList.json')
 
     config.addShortcode('excerpt', article => extractExcerpt(article));
 

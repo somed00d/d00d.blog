@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  transition: all 300ms ease-in-out;
 }
 
 body {
@@ -19,7 +20,7 @@ body > * {
   margin-right: auto;
 }
 
-main {
+.margin-top {
   margin-top: var(--layout-spacing);
 }
 

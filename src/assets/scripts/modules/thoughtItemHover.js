@@ -21,6 +21,10 @@ function addListener(elementsArray) {
                 element.style.color = '#9ca3af';
                 header[0].style.color = '#f43f5e';
         })
+        if (document.location.pathname !== "/") {
+            element.removeEventListener("mouseenter", { passive: true })
+            element.removeEventListener("mouseleave", { passive: true })
+        }
     });
 }
 

@@ -22,10 +22,6 @@ templateClass: tmpl-thought
 {%- set nextThought = collections.thoughts | getNextCollectionItem(page) %}
 {%- set previousThought = collections.thoughts | getPreviousCollectionItem(page) %}
 {%- if nextThought or previousThought %}
-<hr>
-<ul>
-  {%- if nextThought %}<li>Next: <a href="{{ nextThought.url | url }}">{{ nextThought.data.title }}</a></li>{% endif %}
-  {%- if previousThought %}<li>Previous: <a href="{{ previousThought.url | url }}">{{ previousThought.data.title }}</a></li>{% endif %}
-</ul>
+<hr class="thought-hr">
 {%- endif %}
 {%- endif %}
