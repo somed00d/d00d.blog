@@ -1,7 +1,6 @@
 {
-  "name": "eleventastic",
+  "name": "some.d00d.blog",
   "version": "1.0.0",
-  "description": "A boilerplate for eleventy websites",
   "browserslist": [
     "defaults"
   ],
@@ -14,11 +13,6 @@
     "clean": "del-cli dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/maxboeck/eleventastic"
-  },
-  "author": "Max Böck",
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",

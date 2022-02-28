@@ -16,7 +16,7 @@ fetch('/data/quotesList.json')
             let random = quotesList[Math.floor(Math.random() * quotesList.length)];
 
             // Remove random quote from quotesList array
-            quotesList = quotesList.filter((quote) => quote !== random);
+            // quotesList = quotesList.filter((quote) => quote !== random);
 
             // Add to current quote array
             currentQuote.push(random)
@@ -62,6 +62,6 @@ fetch('/data/quotesList.json')
                     // Remove fade
                     quotesBoxEl.classList.remove('fade');
                     }, 1000)
-            }, 8000);
+            }, 13000);
         } 
     })
