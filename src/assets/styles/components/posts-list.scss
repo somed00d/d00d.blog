@@ -1,6 +1,5 @@
 .posts-list__header {
     max-width: 700px;
-    margin: 0 auto;
     margin-top: 2rem;
 
     .posts-list__title {
@@ -8,7 +7,7 @@
         font-weight: 400;
         color: $color-text-300;
         background-color: white;
-        font-size: $step-1;
+        font-size: $step--1;
         padding: $space-xs;
         display: inline;
     }
@@ -18,17 +17,19 @@
     list-style: none;
     padding: 0;
     max-width: 700px;
+    width: 100%;
+    padding-top: $space-xs;
     margin: 0 auto;
 
     .posts-list-item {
         @include hover-focus {
-            box-shadow: 0 0 0 2px $gray-800, $box-shadow;
+            box-shadow: 0 0 0 2px $sdb-color-secondary-darker, $box-shadow;
         }
         
         box-shadow: 0 0 0 2px $sdb-color-secondary-lighter;
         border-radius: $border-radius-sm;
         padding: $space-s;
-        margin: $space-xs $space-3xs $space-m $space-3xs;
+        // margin: $space-xs $space-3xs $space-m $space-3xs;
         transition: $trans-basic-slow;
         color: $color-text-100;
         height: auto;
@@ -52,6 +53,7 @@
             -webkit-tap-highlight-color: transparent;
             padding: 0;
             text-transform: capitalize;
+            line-height: 1.3;
             &:focus {
                 text-decoration: underline;
                 box-shadow: 0 0 0 2px lighten(blue, 35%);
@@ -70,7 +72,7 @@
 
         .posts-list-excerpt {
             display: block;
-            color: $color-text-200;
+            color: $color-text-100;
             overflow: hidden;
             margin-top: $space-2xs;
             height: auto;
@@ -100,25 +102,6 @@
             }
         }
     }
-    .posts-list__more-link {
-        @include hover-focus {
-            color: $sdb-color-secondary-darker;
-            box-shadow: 0 0 0 2px $sdb-color-secondary;
-        }
-        display: inline-flex;
-        align-items: center;
-        align-self: flex-start;
-        font-family: 'Varela Round';
-        font-weight: 400;
-        color: $sdb-color-secondary-darker;
-        background-color: white;
-        font-size: $step--2;
-        text-decoration: none;
-        margin: $space-3xs;
-        padding: $space-2xs $space-xs;
-        border-radius: $border-radius-sm;
-        transition: $trans-basic;
-    }
 }
 
 .thoughts-page-header-wrapper {
@@ -137,25 +120,12 @@
 }
 
 
-.posts-list__more-link {
+a.posts-list__more-link {
+    align-self: flex-start;
+    border: 2px solid red;
+    width: 100%;
     @include hover-focus {
         color: $sdb-color-secondary-darker;
         box-shadow: 0 0 0 2px $sdb-color-secondary;
-    }
-    display: inline-flex;
-    align-items: center;
-    align-self: flex-start;
-    font-family: 'Varela Round';
-    font-weight: 400;
-    color: $sdb-color-secondary-darker;
-    background-color: white;
-    font-size: $step--2;
-    text-decoration: none;
-    margin: $space-3xs;
-    padding: $space-2xs $space-xs;
-    border-radius: $border-radius-sm;
-    transition: $trans-basic;
-    @media (min-width: 1140px) {
-        margin: 0 14rem;
     }
 }

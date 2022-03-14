@@ -20,9 +20,8 @@
 // @import 'components/nav';
 
 // Layouts
-@import 'layouts/thought';
 @import 'layouts/post';
-@import 'layouts/book';
+@import 'layouts/thought';
 
 html, body { height: 99%; }
 
@@ -38,6 +37,9 @@ body {
     display: grid;
     place-content: center;
     margin-top: 4rem;
+    @media (max-width: 768px) {
+        margin-top: 0;
+    }
 }
 
 // ERASE LATER

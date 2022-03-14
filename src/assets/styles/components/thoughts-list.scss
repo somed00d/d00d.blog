@@ -1,6 +1,4 @@
 .thoughts-list__header {
-    max-width: 700px;
-    margin: 0 auto;
 
     .thoughts-list__title {
         font-family: 'Varela Round';
@@ -9,7 +7,6 @@
         background-color: white;
         font-size: $step--1;
         padding: $space-xs;
-        display: inline;
     }
 }
 
@@ -21,13 +18,14 @@
 
     .thoughtlist-item {
         @include hover-focus {
-            box-shadow: 0 0 0 2px $gray-800, $box-shadow;
+            box-shadow: 0 0 0 2px $sdb-color-primary-darker, $box-shadow;
         }
         
         box-shadow: 0 0 0 2px $sdb-color-primary-lighter;
         border-radius: $border-radius-sm;
         padding: $space-s;
-        margin: $space-xs $space-3xs $space-m $space-3xs;
+        // margin: $space-xs $space-3xs $space-m $space-3xs;
+        margin-bottom: $space-m;
         transition: $trans-basic-slow;
         color: $color-text-100;
         height: 250px;

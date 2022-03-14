@@ -16,8 +16,12 @@ body > * {
   // --max-width: 70ch;
   --max-width: 1140px;
   width: min(100%, var(--max-width));
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+main {
+  display: grid;
+  place-content: center;
 }
 
 .margin-top {
@@ -52,8 +56,4 @@ footer {
     a {
         text-decoration: none;
     }
-}
-
-.layout {
-    height: 100%;
 }

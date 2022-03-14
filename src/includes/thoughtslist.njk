@@ -3,11 +3,7 @@
   <li class="thoughtlist-item{% if though.url == url %} thoughtlist-item-active{% endif %}">
     <div class="thoughtlist-date-time">
       <a href="{{ thought.url | url }}" class="thoughtlist-link">{% if thought.data.title %}{{ thought.data.title }}{% else %}<code>{{ thought.url }}</code>{% endif %}</a>
-      <time class="thoughtlist-date" datetime="{{ thought.date | dateToISO(thought.date) }}">{{ thought.date | dateToRelative() }}</time>
-    {# {% for tag in thought.data.tags | filterTagList %}
-      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="thought-tag">{{ tag }}</a>
-    {% endfor %} #}
+      {# <time class="thoughtlist-date" datetime="{{ thought.date | dateToISO(thought.date) }}">{{ thought.date | dateToRelative() }}</time> #}
     </div>
     <div class="thoughtlist-excerpt">
       {% excerpt thought %}

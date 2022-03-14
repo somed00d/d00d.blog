@@ -9,23 +9,16 @@ layout: home
     </div>
     
     {# Thoughts #}
-    {# {% set maxThoughts = collections.thoughts.length | min(3) %}
+    {% set maxThoughts = collections.thoughts.length | min(3) %}
     <div class="thoughts-list__header">
-        <h1 class="thoughts-list__title">{% if maxThoughts == 1 %}thought{% else %}{{ maxThoughts}} thoughts{% endif %}</h1>
+        <h1 class="thoughts-list__title">{% if maxThoughts == 1 %}{{maxThoughts}} thought{% else %}{{ maxThoughts}} thoughts{% endif %}</h1>
     </div>
     {% set thoughtslist = collections.thoughts | head(-3) %}
     {% set thoughtslistCounter = collections.thoughts | length %}
     {% include "thoughtslist.njk" %}
-    <a href="/thoughts" title="More thoughts" class="thoughts-list__more-link">
-        <span>
-            All thoughts
-        </span>
-        &nbsp;
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
-    </a> #}
 
     {# Posts #}
-    {# {% set maxPosts = collections.posts.length | min(3) %}
+    {% set maxPosts = collections.posts.length | min(3) %}
     <div class="posts-list__header">
         <h1 class="posts-list__title">{% if maxPosts == 1 %}{{maxPosts }} post{% else %}{{ maxPosts }} posts{% endif %}</h1>
     </div>
@@ -33,14 +26,6 @@ layout: home
     {% set postslist = collections.posts | head(-3) %}
     {% set postslistCounter = collections.posts | length %}
     {% include "postslist.njk" %}
- 
-    <a href="/posts" title="More thoughts" class="posts-list__more-link">
-        <span>
-            All posts
-        </span>
-        &nbsp;
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
-    </a> #}
     
     {# Books #}
     {# {% set maxBooks = collections.books.length | min(3) %}

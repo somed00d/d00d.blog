@@ -3,18 +3,10 @@
   <li class="posts-list-item{% if though.url == url %} postlist-item-active{% endif %}">
     <div class="posts-list-date-time">
       <a href="{{ post.url | url }}" class="posts-list-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <time class="posts-list-date" datetime="{{ post.date | dateToISO(thought.date) }}">{{ post.date | dateToRelative() }}</time>
-    {# {% for tag in post.data.tags | filterTagList %}
-      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %} #}
     </div>
     <div class="posts-list-excerpt">
       {% excerpt post %}
     </div>
-    {# <div class="posts-list-read-more">
-      <a href="{{ post.url | url}}" class="read-more-link" title="Read more">Read more</a>
-    </div> #}
   </li>
 {% endfor %}
 </ol>

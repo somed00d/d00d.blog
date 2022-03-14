@@ -24,12 +24,23 @@
 
 // 1140px x 24px
 
-$step--3: clamp(0.77rem, calc(0.40rem + 0.51vw), 0.51rem);
-$step--2: clamp(0.96rem, calc(0.47rem + 0.69vw), 0.61rem);
-$step--1: clamp(0.73rem, calc(0.55rem + 0.92vw), 1.20rem);
-$step-0: clamp(0.88rem, calc(0.63rem + 1.22vw), 1.50rem);
-$step-1: clamp(1.05rem, calc(0.73rem + 1.61vw), 1.88rem);
-$step-2: clamp(1.26rem, calc(0.84rem + 2.11vw), 2.34rem);
-$step-3: clamp(1.51rem, calc(0.96rem + 2.77vw), 2.93rem);
-$step-4: clamp(1.81rem, calc(1.09rem + 3.60vw), 3.66rem);
-$step-5: clamp(2.18rem, calc(1.24rem + 4.68vw), 4.58rem);
+// $step--3: clamp(0.77rem, calc(0.40rem + 0.51vw), 0.51rem);
+// $step--2: clamp(0.96rem, calc(0.47rem + 0.69vw), 0.61rem);
+// $step--1: clamp(0.73rem, calc(0.55rem + 0.92vw), 1.20rem);
+// $step-0: clamp(0.88rem, calc(0.63rem + 1.22vw), 1.50rem);
+// $step-1: clamp(1.05rem, calc(0.73rem + 1.61vw), 1.88rem);
+// $step-2: clamp(1.26rem, calc(0.84rem + 2.11vw), 2.34rem);
+// $step-3: clamp(1.51rem, calc(0.96rem + 2.77vw), 2.93rem);
+// $step-4: clamp(1.81rem, calc(1.09rem + 3.60vw), 3.66rem);
+// $step-5: clamp(2.18rem, calc(1.24rem + 4.68vw), 4.58rem);
+
+
+$step--3: clamp(0.77rem, calc(0.76rem + 0.02vw), 0.76rem);
+$step--2: clamp(0.96rem, calc(0.89rem + 0.10vw), 0.91rem);
+$step--1: clamp(1.20rem, calc(1.05rem + 0.21vw), 1.09rem);
+$step-0: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
+$step-1: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
+$step-2: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
+$step-3: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
+$step-4: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
+$step-5: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);

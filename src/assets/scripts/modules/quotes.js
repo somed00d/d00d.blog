@@ -5,6 +5,8 @@ fetch('/data/quotesList.json')
             // Add quotes to array
             let quotesList = result.quotes;
 
+            let oldQuotesList = [];
+
             // Declare array to store our 
             // current quote in that will display
             let currentQuote = [];
@@ -42,6 +44,12 @@ fetch('/data/quotesList.json')
                 // Add fade
                 quotesBoxEl.classList.add('fade');
                 setTimeout(() => {
+                    // console.log(quotesList.length)
+                    // console.log(oldQuotesList.length)
+                    if (quotesList.length === 0) {
+                        quotesList = oldQuotesList
+                        oldQuotesList = [];
+                    }
                     // Choose random quote
                     let random = quotesList[Math.floor(Math.random() * quotesList.length)];
                     // console.log(random)
@@ -50,7 +58,8 @@ fetch('/data/quotesList.json')
                     // console.log(quotesList)
                     // Remove quote from currentQuote array
                     // and add back to quotesList array
-                    quotesList.push(currentQuote.shift());
+                    // quotesList.push(currentQuote.shift());
+                    oldQuotesList.push(currentQuote.shift())
 
                     // Add to current quote array
                     currentQuote.push(random);
@@ -62,6 +71,6 @@ fetch('/data/quotesList.json')
                     // Remove fade
                     quotesBoxEl.classList.remove('fade');
                     }, 1000)
-            }, 13000);
+            }, 10000);
         } 
     })

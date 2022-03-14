@@ -3,7 +3,7 @@
     place-content: center;
     height: 200px;
     max-width: 600px;
-    margin: $space-s auto;
+    margin: $space-m auto;
     background-color: white;
     transition: all 300ms ease-in-out;
     padding: $space-xs $space-s;
@@ -17,7 +17,7 @@
 .quote-text {
     display: inline;
     color: $sdb-color-secondary-darker;
-    font-size: $step-1;
+    font-size: $step--1;
     font-family: 'Zilla Slab';
     font-weight: 500;
     line-height: 1.4;
@@ -42,7 +42,7 @@
     display: inline-block;
     margin: 0.5rem;
     color: $color-text-100;
-    font-size: $step--1;
+    font-size: $step--3;
     font-weight: 300;
     font-family: sans-serif;
     white-space: nowrap;
@@ -51,7 +51,7 @@
 .quote-author::before {
     content: '—';
     margin-right: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .fade {

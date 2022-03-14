@@ -1,10 +1,11 @@
-const pluginRss = require('@11ty/eleventy-plugin-rss')
-const pluginNavigation = require('@11ty/eleventy-navigation')
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginNavigation = require('@11ty/eleventy-navigation');
 const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
-const markdownIt = require('markdown-it')
+const markdownIt = require('markdown-it');
+const typographyPlugin = require("@jamshop/eleventy-plugin-typography");
 
-const filters = require('./utils/filters.js')
-const transforms = require('./utils/transforms.js')
+const filters = require('./utils/filters.js');
+const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
 const collections = require('./utils/collections.js');
 
@@ -16,6 +17,7 @@ module.exports = function (config) {
         path: "./src/assets/icons",
         svgSpriteShortcode: "iconsprite"
     })
+    config.addPlugin(typographyPlugin);
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
