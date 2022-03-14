@@ -20,7 +20,7 @@ Unfortunately, none of it is a cure-all. And it's likely it won't be for a long 
 In either article, I didn't see mentioned what I believe could help partially answer the psychedelics question. We must look back to a book published in 1971 by Ram Das, born Richard Alpert. He was no dummy, ended up at Harvard doing work on psychology with Leary. Some of the absolute first to mess with psychedelics, before Shulgin had come along.
 
 
-In his book, he describes how they discovered that LSD relieved suffering. Following personal experimentation for many months. They locked themselves in a house for three weeks and took 400 mg of LSD every four hours. Essentially concluding that while it did relieve suffering, you always came down. In other words, it wasn't practical to take LSD to relieve suffering. Since you'd more or less have to always be taking it.
+In his book, he describes how they discovered that LSD relieved suffering. Following personal experimentation for many months. They locked themselves in a house for three weeks and took 400 micrograms of LSD every four hours. Essentially concluding that while it did relieve suffering, you always came down. In other words, it wasn't practical to take LSD to relieve suffering. Since you'd more or less have to always be taking it.
 
 <img src="/assets/images/ram-das-1.jpg" alt="Ram Das book">
 <div class="caption">Excerpt from <em>Be Here Now.</em></div>
